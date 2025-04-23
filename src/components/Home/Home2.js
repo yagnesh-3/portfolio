@@ -22,6 +22,7 @@ import Projects from "../Projects/Projects";
 import About from "../About/About";
 import Education from "./Education";
 import Certifications from "../Certifications/Certifications";
+import Github from "../About/Github";
 
 function Home2() {
   return (
@@ -82,6 +83,7 @@ function Home2() {
 
       <Education />
 
+      <Github />
 
       <Row>
         <Col md={12} className="home-about-social">
