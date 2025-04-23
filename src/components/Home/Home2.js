@@ -8,6 +8,7 @@ import {
   AiFillGithub,
   AiOutlineTwitter,
   AiFillInstagram,
+  AiOutlineMail, AiOutlineWhatsApp, AiOutlinePhone
 } from "react-icons/ai";
 import {
   VerticalTimeline,
@@ -75,7 +76,7 @@ function Home2() {
         <Projects />
       </div>
       <div id="certifications">
-      <Certifications />
+        <Certifications />
       </div>
 
 
@@ -89,6 +90,36 @@ function Home2() {
             Feel free to <span className="purple">connect </span>with me
           </p>
           <ul className="home-about-social-links">
+            <li className="social-icons">
+              <a
+                href="mailto:yagnesh.glk@gmail.com"
+                className="icon-colour home-social-icons"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiOutlineMail />
+              </a>
+            </li>
+
+            <li className="social-icons">
+              <a
+                href="https://wa.me/918247223929"
+                className="icon-colour home-social-icons"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiOutlineWhatsApp />
+              </a>
+            </li>
+
+            <li className="social-icons">
+              <a
+                href="tel:+918247223929"
+                className="icon-colour home-social-icons"
+              >
+                <AiOutlinePhone />
+              </a>
+            </li>
             <li className="social-icons">
               <a
                 href="https://github.com/yagnesh-3"
@@ -119,6 +150,7 @@ function Home2() {
                 <AiFillInstagram />
               </a>
             </li>
+
           </ul>
         </Col>
       </Row>
