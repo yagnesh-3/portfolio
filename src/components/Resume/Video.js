@@ -51,17 +51,19 @@ const Video = () => {
                             overflow: "hidden",
                         }}
                     >
-                        <video
-                            controls
+                        <iframe
+                            src="https://drive.google.com/file/d/1Ai4qdYxhkbMajDr7Exvr7CB-HHNbNeqG/preview"
+                            allow="autoplay"
+                            allowFullScreen
+                            title="Video Resume"
                             style={{
                                 width: "100%",
-                                height: "auto",
+                                height: "360px",
+                                border: "none",
                                 borderRadius: "12px",
                             }}
-                        >
-                            <source src="/videoCV.mp4" type="video/mp4" />
-                            Your browser does not support the video tag.
-                        </video>
+                        ></iframe>
+
                     </div>
                 </Row>
 
