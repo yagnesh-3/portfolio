@@ -847,6 +847,7 @@ button:focus {
 .contact-form-wrapper {
   text-align: center;
   /* background: rgba(30, 18, 54, 0.5); */
+  background: var(--section-background-color);
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(199, 112, 240, 0.3);
