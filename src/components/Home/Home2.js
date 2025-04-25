@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 // import myImg from "../../Assets/photo.jpg";
 import myImg from "../../Assets/photo.png";
@@ -23,8 +23,20 @@ import About from "../About/About";
 import Education from "./Education";
 import Certifications from "../Certifications/Certifications";
 import Github from "../About/Github";
+import Contact from "../Contact";
+import { useLocation } from "react-router-dom";
 
 function Home2() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToContact) {
+      const contactEl = document.getElementById("contact");
+      if (contactEl) {
+        contactEl.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
@@ -84,78 +96,10 @@ function Home2() {
       <Education />
 
       <Github />
+      <div id="contact">
+        <Contact />
+      </div>
 
-      <Row>
-        <Col md={12} className="home-about-social">
-          <h1>FIND ME ON</h1>
-          <p>
-            Feel free to <span className="purple">connect </span>with me
-          </p>
-          <ul className="home-about-social-links">
-            <li className="social-icons">
-              <a
-                href="mailto:yagnesh.glk@gmail.com"
-                className="icon-colour home-social-icons"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <AiOutlineMail />
-              </a>
-            </li>
-
-            <li className="social-icons">
-              <a
-                href="https://wa.me/918247223929"
-                className="icon-colour home-social-icons"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <AiOutlineWhatsApp />
-              </a>
-            </li>
-
-            <li className="social-icons">
-              <a
-                href="tel:+918247223929"
-                className="icon-colour home-social-icons"
-              >
-                <AiOutlinePhone />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://github.com/yagnesh-3"
-                target="_blank"
-                rel="noreferrer"
-                className="icon-colour  home-social-icons"
-              >
-                <AiFillGithub />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.linkedin.com/in/gylgr/"
-                target="_blank"
-                rel="noreferrer"
-                className="icon-colour  home-social-icons"
-              >
-                <FaLinkedinIn />
-              </a>
-            </li>
-            <li className="social-icons">
-              <a
-                href="https://www.instagram.com/yagnesh.golakoti"
-                target="_blank"
-                rel="noreferrer"
-                className="icon-colour home-social-icons"
-              >
-                <AiFillInstagram />
-              </a>
-            </li>
-
-          </ul>
-        </Col>
-      </Row>
 
     </Container>
   );

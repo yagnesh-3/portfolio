@@ -19,11 +19,13 @@ function Particle() {
             opacity: 0.03,
           },
           move: {
-            direction: "right",
-            speed: 0.05,
+            enable: true,
+            direction: "right", // "none", "top", "bottom", "left", etc.
+            speed: 1,           // Adjusted from 0.05 to 1
+            straight: false,    // Makes the movement more natural
           },
           size: {
-            value: 1,
+            value: 1.5,
           },
           opacity: {
             anim: {
